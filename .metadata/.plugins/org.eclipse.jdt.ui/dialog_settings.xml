@@ -58,11 +58,11 @@
 		<item value="false" key="JarManifestWizardPage.SAVE_MANIFEST"/>
 		<item value="false" key="JarPackageWizardPage.EXPORT_OUTPUT_FOLDER"/>
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/home/franklin/STDCalls.jar"/>
+			<item value="/home/franklin/speedPro.jar"/>
+			<item value="/home/franklin/practice1.jar"/>
+			<item value="/home/franklin/SalesByDate.jar"/>
 			<item value="/home/franklin/GPPCat1.jar"/>
-			<item value="/home/franklin/GPPtest1.jar"/>
-			<item value="/home/franklin/GPCat1.jar"/>
-			<item value="/home/franklin/GPtest1.jar"/>
-			<item value="/home/franklin/HTtest1.jar"/>
 		</list>
 	</section>
 	<section name="JavaElementSearchActions">

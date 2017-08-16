@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="19" version="2.0">
 <workbenchAdvisor/>
 <window height="666" maximized="true" width="1018" x="65" y="-4">
 <fastViewData fastViewLocation="1024"/>
@@ -19,7 +19,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -28,10 +28,31 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SalesByDatePgm.java" partName="SalesByDatePgm.java" path="/home/franklin/workspace/SalesByDate/src/SalesByDatePgm.java" title="SalesByDatePgm.java" tooltip="SalesByDate/src/SalesByDatePgm.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SalesByDate/src/SalesByDatePgm.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1809" selectionTopPixel="757"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrossPCatPgm.java" partName="GrossPCatPgm.java" path="/home/franklin/workspace/GrossPCat/src/GrossPCatPgm.java" title="GrossPCatPgm.java" tooltip="GrossPCat/src/GrossPCatPgm.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GrossPCat/src/GrossPCatPgm.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="55" selectionOffset="2034" selectionTopPixel="667"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PracticePgm.java" partName="PracticePgm.java" path="/home/franklin/workspace/Practice1/src/PracticePgm.java" title="PracticePgm.java" tooltip="Practice1/src/PracticePgm.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Practice1/src/PracticePgm.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="44" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="STDCalls.java" partName="STDCalls.java" path="/home/franklin/workspace/PhoneRecords/src/STDCalls.java" title="STDCalls.java" tooltip="PhoneRecords/src/STDCalls.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PhoneRecords/src/STDCalls.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2" selectionTopPixel="1057"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
@@ -69,7 +90,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (13 items)"/>
+<category IMemento.internal.id="Warnings (16 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="257" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -266,7 +287,166 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Practice1/src/PracticePgm.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/PhoneRecords/src/PhoneRecordsPgm.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SpeedProject/src/SpeedProjectPgm.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SalesByDate/src/SalesByDatePgm.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/PhoneRecords/src/PhoneRecordsPgm.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/PhoneRecords/src/STDCalls.java"/>
+</editors>
+<item historyLabel="PracticePgm.java" index="0">
+<position info="not_deleted" x="1565" y="13"/>
+</item>
+<item historyLabel="PracticePgm.java" index="0">
+<position info="not_deleted" x="2147" y="0"/>
+</item>
+<item historyLabel="PracticePgm.java" index="0">
+<position info="not_deleted" x="2144" y="0"/>
+</item>
+<item historyLabel="PracticePgm.java" index="0">
+<position info="not_deleted" x="2010" y="0"/>
+</item>
+<item historyLabel="PracticePgm.java" index="0">
+<position info="not_deleted" x="2028" y="0"/>
+</item>
+<item historyLabel="PracticePgm.java" index="0">
+<position info="not_deleted" x="2144" y="0"/>
+</item>
+<item historyLabel="PracticePgm.java" index="0">
+<position info="not_deleted" x="2034" y="16"/>
+</item>
+<item historyLabel="PracticePgm.java" index="0">
+<position info="not_deleted" x="2144" y="0"/>
+</item>
+<item historyLabel="PracticePgm.java" index="0">
+<position info="not_deleted" x="2142" y="0"/>
+</item>
+<item historyLabel="PracticePgm.java" index="0">
+<position info="not_deleted" x="44" y="0"/>
+</item>
+<item historyLabel="PhoneRecordsPgm.java" index="1">
+<position info="not_deleted" x="161" y="0"/>
+</item>
+<item historyLabel="PhoneRecordsPgm.java" index="1">
+<position info="not_deleted" x="429" y="0"/>
+</item>
+<item historyLabel="PhoneRecordsPgm.java" index="1">
+<position info="not_deleted" x="272" y="4"/>
+</item>
+<item historyLabel="PhoneRecordsPgm.java" index="1">
+<position info="not_deleted" x="429" y="0"/>
+</item>
+<item historyLabel="PhoneRecordsPgm.java" index="1">
+<position info="not_deleted" x="383" y="0"/>
+</item>
+<item historyLabel="PhoneRecordsPgm.java" index="1">
+<position info="not_deleted" x="419" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="493" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="618" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="661" y="4"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="618" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="1035" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="737" y="7"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="1035" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="1027" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="785" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="804" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="958" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="931" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="932" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="958" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="1237" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="1669" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="1669" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="1592" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="1661" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="1732" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="2358" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="1796" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="2355" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="1757" y="13"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="2355" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="2180" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="2294" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="2350" y="0"/>
+</item>
+<item historyLabel="SpeedProjectPgm.java" index="2">
+<position info="not_deleted" x="365" y="0"/>
+</item>
+<item historyLabel="SalesByDatePgm.java" index="3">
+<position info="not_deleted" x="1809" y="0"/>
+</item>
+<item historyLabel="PhoneRecordsPgm.java" index="4">
+<position info="not_deleted" x="504" y="0"/>
+</item>
+<item historyLabel="STDCalls.java" index="5">
+<position info="not_deleted" x="2" y="0"/>
+</item>
+<item historyLabel="PhoneRecordsPgm.java" index="4">
+<position info="not_deleted" x="504" y="0"/>
+</item>
+<item active="true" historyLabel="STDCalls.java" index="5">
+<position info="not_deleted" x="2" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -283,6 +463,27 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="STDCalls.java" tooltip="PhoneRecords/src/STDCalls.java">
+<persistable path="/PhoneRecords/src/STDCalls.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SpeedProjectPgm.java" tooltip="SpeedProject/src/SpeedProjectPgm.java">
+<persistable path="/SpeedProject/src/SpeedProjectPgm.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PhoneRecordsPgm.java" tooltip="PhoneRecords/src/PhoneRecordsPgm.java">
+<persistable path="/PhoneRecords/src/PhoneRecordsPgm.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PracticePgm.java" tooltip="Practice1/src/PracticePgm.java">
+<persistable path="/Practice1/src/PracticePgm.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrossPCatPgm.java" tooltip="GrossPCat/src/GrossPCatPgm.java">
+<persistable path="/GrossPCat/src/GrossPCatPgm.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SalesByDatePgm.java" tooltip="SalesByDate/src/SalesByDatePgm.java">
+<persistable path="/SalesByDate/src/SalesByDatePgm.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CustomerBPgm.java" tooltip="CustomerB/src/CustomerBPgm.java">
+<persistable path="/CustomerB/src/CustomerBPgm.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Top10ProdPgm.java" tooltip="Top10Products/src/Top10ProdPgm.java">
 <persistable path="/Top10Products/src/Top10ProdPgm.java"/>
 </file>
@@ -291,9 +492,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrossPProdPgm.java" tooltip="GrossPercentProduct/src/GrossPProdPgm.java">
 <persistable path="/GrossPercentProduct/src/GrossPProdPgm.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrossPCatPgm.java" tooltip="GrossPCat/src/GrossPCatPgm.java">
-<persistable path="/GrossPCat/src/GrossPCatPgm.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HighTranxPgm.java" tooltip="HighTranx/src/HighTranxPgm.java">
 <persistable path="/HighTranx/src/HighTranxPgm.java"/>
@@ -309,21 +507,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NYSEReducer.java" tooltip="StockVariance/src/NYSEReducer.java">
 <persistable path="/StockVariance/src/NYSEReducer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NYSEMapper.java" tooltip="StockVariance/src/NYSEMapper.java">
-<persistable path="/StockVariance/src/NYSEMapper.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="P1Driver.java" tooltip="Project1/src/P1Driver.java">
-<persistable path="/Project1/src/P1Driver.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="P1Reducer.java" tooltip="Project1/src/P1Reducer.java">
-<persistable path="/Project1/src/P1Reducer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="P1Mapper.java" tooltip="Project1/src/P1Mapper.java">
-<persistable path="/Project1/src/P1Mapper.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NYSEMapper1.java" tooltip="StockVariance/src/NYSEMapper1.java">
-<persistable path="/StockVariance/src/NYSEMapper1.java"/>
 </file>
 </mruList>
 </workbench>

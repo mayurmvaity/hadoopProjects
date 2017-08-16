@@ -1,0 +1,85 @@
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.io.FloatWritable;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+
+
+public class SpeedProjectPgm {
+
+	// Mapper class
+	
+	public static class SpeedPMapper extends Mapper<LongWritable, Text, Text, IntWritable>
+	{
+		public void map(LongWritable key, Text value, Context context)
+		{
+			try
+			{
+				String str[] = value.toString().split(",");
+				String drid = str[0];
+				
+				Integer speed = Integer.parseInt(str[1]);
+				
+				context.write(new Text(drid), new IntWritable(speed));
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	
+	
+	// Reducer class
+	
+	public static class SpeedPReducer extends Reducer<Text, IntWritable, Text, FloatWritable>
+	{
+		public void reduce(Text key, Iterable<IntWritable> values, Context context)
+		{
+			try {
+			int count=0;
+			int offcount = 0;
+			for(IntWritable val : values)
+			{
+				count++;
+				if(val.get() > 65)
+				{
+					offcount++;
+				}
+				
+			}
+			
+			Integer trecs = count;
+			Integer offrecs = offcount;
+			
+			Float offpercent = (trecs-offrecs)/(trecs)*100;
+			
+			context.write(new Text(key), new FloatWritable(offpercent));
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	
+	// main method
+	public static void main(String args[]) throws Exception
+	{
+		Configuration conf = new Configuration();
+		Job job = Job.getInstance(conf, "Speeding offence percentage");
+		
+		job.setJarByClass(SpeedProjectPgm.class);
+		
+		job.setMapperClass(SpeedPMapper.class);
+		job.setReducerClass(SpeedPReducer.class);
+		
+		job.setMapOutput
+		
+		
+	}
+	
+}

@@ -1,0 +1,9 @@
+
+public class PracticePgm {
+
+	public static class PMapper extends Mapper<LongWritable, Text, Text, LongWritable>
+	{
+		
+	}
+	
+}

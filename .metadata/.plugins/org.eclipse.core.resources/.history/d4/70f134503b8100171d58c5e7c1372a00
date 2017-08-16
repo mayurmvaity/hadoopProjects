@@ -1,0 +1,20 @@
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+
+public class SalesByDatePgm {
+
+	public static class DtMapper extends Mapper<LongWritable, Text, Text, LongWritable>
+	{
+		try
+		{
+			
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
+	
+}

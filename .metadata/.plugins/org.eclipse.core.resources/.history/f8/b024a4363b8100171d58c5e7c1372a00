@@ -1,0 +1,16 @@
+
+public class SalesByDatePgm {
+
+	public static class DtMapper extends Mapper<LongWritable,Text, Text, LongWritable>
+	{
+		try
+		{
+			
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
+	
+}

@@ -1,0 +1,46 @@
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+
+
+public class SpeedProjectPgm {
+
+	// Mapper class
+	
+	public static class SpeedPMapper extends Mapper<LongWritable, Text, Text, IntWritable>
+	{
+		public void map(LongWritable key, Text value, Context context)
+		{
+			try
+			{
+				String str[] = value.toString().split(",");
+				String drid = str[0];
+				
+				Integer speed = Integer.parseInt(str[1]);
+				
+				context.write(new Text(drid), new IntWritable(speed));
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	
+	
+	// Reducer class
+	
+	public static class SpeedPReducer extends Reducer<Text, IntWritable, Text, IntWritable>
+	{
+		public void reduce(Text key, Iterable<IntWritable> values, Context context)
+		{
+			int count=0;
+			for(IntWritable val : values)
+			{
+				count++;
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+
+
+public class PracticePgm {
+
+	// Mapper class
+	
+	public static class PMapper extends Mapper<LongWritable, Text, Text, LongWritable>
+	{
+		public void map(LongWritable key, Text value, Context context)
+		{
+			try
+			{
+				String str[] = value.toString().split(";");
+				String dtt = str[0];
+				String custid = str[1];
+				
+				String dt = dtt.substring(0, 10);
+				String mykey = dt+','+custid;
+				
+				Long myval = Long.parseLong(str[8]);
+				
+				context.write(new Text(mykey), new LongWritable(myval));
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+			
+		}
+	}
+	
+	
+	// Reducer class
+	
+	public static class PReducer extends Reducer<Text, LongWritable, Text, LongWritable>
+	{
+		
+	}
+}
