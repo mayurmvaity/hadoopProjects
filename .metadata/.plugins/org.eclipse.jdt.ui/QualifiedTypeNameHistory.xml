@@ -6,13 +6,13 @@
 <fullyQualifiedTypeName name="javax.swing.text.AbstractDocument.Content"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.io.NullWritable"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.fs.Path"/>
-<fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Mapper"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.io.LongWritable"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.io.DoubleWritable"/>
 <fullyQualifiedTypeName name="GrossPCatPgm.GPCatMapper"/>
 <fullyQualifiedTypeName name="GrossPCatPgm.GPCatReducer"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Reducer"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.mapred.FileOutputFormat"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Mapper"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.io.Text"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.conf.Configuration"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Job"/>
