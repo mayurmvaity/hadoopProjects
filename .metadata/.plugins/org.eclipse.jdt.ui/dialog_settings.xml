@@ -58,11 +58,11 @@
 		<item value="false" key="JarManifestWizardPage.SAVE_MANIFEST"/>
 		<item value="false" key="JarPackageWizardPage.EXPORT_OUTPUT_FOLDER"/>
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/home/franklin/SearchPro.jar"/>
+			<item value="/home/franklin/TPro.jar"/>
 			<item value="/home/franklin/AvgByCity.jar"/>
 			<item value="/home/franklin/STDCalls.jar"/>
 			<item value="/home/franklin/speedPro.jar"/>
-			<item value="/home/franklin/practice1.jar"/>
-			<item value="/home/franklin/SalesByDate.jar"/>
 		</list>
 	</section>
 	<section name="JavaElementSearchActions">

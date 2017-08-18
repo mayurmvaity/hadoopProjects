@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Mapper.Context"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.io.FloatWritable"/>
 <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="javax.swing.text.AbstractDocument.Content"/>
@@ -12,8 +11,9 @@
 <fullyQualifiedTypeName name="GrossPCatPgm.GPCatReducer"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Reducer"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.mapred.FileOutputFormat"/>
-<fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Mapper"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.io.Text"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Mapper"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Mapper.Context"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.conf.Configuration"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Job"/>
 <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.lib.input.FileInputFormat"/>
