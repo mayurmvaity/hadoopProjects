@@ -1,0 +1,69 @@
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hadoop.util.Tool;
+
+
+public class MyPartitioner extends Configured implements Tool {
+
+	// mapperclass
+	
+	public static class MapClass extends Mapper<LongWritable, Text, Text, Text>
+	{
+		public void map(LongWritable key, Text value, Context context)
+		{
+			try
+			{
+				String[] str = value.toString().split(",");
+				String gender = str[3];
+				
+				context.write(new Text(gender), new Text(value));
+				
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	
+	// reducer class
+	
+	public static class ReduceClass extends Reducer<Text, Text, Text, IntWritable>
+	{
+		public int max = -1;
+		private Text outputkey = new Text();
+		
+		public void reduce(Text key, Iterable(Text) values, Context context)
+		{
+			try
+			{
+				max = -1;
+				
+				for(Text val: values)
+				{
+					outputkey.set(key);
+					String[] str = val.toString().split(",");
+					
+					if(Integer.parseInt(str[4])>max)
+					{
+						max = Integer.parseInt(str[4]);
+						String mykey = str[3] + ','+str[1]+','+str[2];
+						outputkey.set(mykey);
+					}
+					
+				}
+				
+				context.write(outputkey, new IntWritable(max));
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+		
+	}
+}

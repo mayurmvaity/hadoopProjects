@@ -1,8 +1,0 @@
-
-public class PhoneRecordsPgm {
-
-	public static class PRMapper extends Mapper<LongWritable, Text, Text, IntWritable>
-	{
-		
-	}
-}
