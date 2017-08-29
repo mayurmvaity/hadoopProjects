@@ -1,0 +1,48 @@
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+/**
+ * 
+ * 
+ * **/
+public class CustomerJoin {
+
+	// mapper class 1
+	public static class M1Class extends Mapper<LongWritable,Text,Text,Text>
+	{
+		public void map(LongWritable key, Text value, Context context)
+		{
+			try
+			{
+				String str[] = value.toString().split(",");
+				
+				String cid = str[0];
+				String cfname = str[1]; 
+				
+				context.write(new Text(cid), new Text(cfname));
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	
+	// mapper class 2 for transactions
+	public static class M2Class extends Mapper<LongWritable,Text,Text,Text>
+	{
+		public void map(LongWritable key, Text value, Context context)
+		{
+			try
+			{
+				
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	
+}
