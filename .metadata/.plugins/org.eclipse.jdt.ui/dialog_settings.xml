@@ -23,6 +23,13 @@
 		<item value="false" key="expanded1"/>
 		<item value="true" key="expanded0"/>
 	</section>
+	<section name="org.eclipse.jdt.internal.ui.wizards.buildpaths.NewVariableEntryDialog">
+		<item value="633" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="388" key="DIALOG_HEIGHT"/>
+		<item value="73" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="NewClassWizardPage">
 		<item value="false" key="create_constructor"/>
 		<item value="false" key="create_main"/>
@@ -58,11 +65,11 @@
 		<item value="false" key="JarManifestWizardPage.SAVE_MANIFEST"/>
 		<item value="false" key="JarPackageWizardPage.EXPORT_OUTPUT_FOLDER"/>
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
-			<item value="/home/franklin/POSpart.jar"/>
-			<item value="/home/franklin/MyPart.jar"/>
-			<item value="/home/franklin/SearchPro.jar"/>
-			<item value="/home/franklin/TPro.jar"/>
-			<item value="/home/franklin/AvgByCity.jar"/>
+			<item value="/home/franklin/C2Cat.jar"/>
+			<item value="/home/franklin/C2Product.jar"/>
+			<item value="/home/franklin/C1PartCat.jar"/>
+			<item value="/home/franklin/C1Part.jar"/>
+			<item value="/home/franklin/CustomerJoin.jar"/>
 		</list>
 	</section>
 	<section name="JavaElementSearchActions">

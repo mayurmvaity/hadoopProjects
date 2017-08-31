@@ -1,0 +1,32 @@
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Mapper.Context;
+import org.apache.hadoop.util.Tool;
+
+
+public class C1PartCat extends Configured implements Tool {
+
+	public static class C1CatM extends Mapper<LongWritable,Text,Text,Text>
+	{
+		public void map(LongWritable key,Text value,Context context)
+		{
+			try
+			{
+				String str[] = value.toString().split(";");
+				
+				String catid = str[4];
+				
+				context.write(new Text(catid), value);
+				
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	
+	
+}
