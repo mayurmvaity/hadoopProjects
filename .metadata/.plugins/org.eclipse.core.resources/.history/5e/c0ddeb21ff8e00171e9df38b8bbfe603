@@ -1,0 +1,213 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.net.URI;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Partitioner;
+import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+
+
+public class POSPgm {
+	
+	// mapper class for POS1
+	public static class POSm1 extends Mapper<LongWritable,Text,Text,Text>
+	{
+		private Map<String,String> abMap = new HashMap<String,String>();
+		
+		// setup method
+		public void setup(Context context)
+		{
+			try
+			{
+				super.setup(context);
+				
+				URI[] u = context.getCacheFiles();
+				
+				Path p = new Path(u[0]);
+				
+				if(p.getName().equals("stmaster.csv"))
+				{
+					BufferedReader br = new BufferedReader(new FileReader(p.toString()));
+					String line = br.readLine();
+					
+					while(line!=null)
+					{
+						String str[] = line.split(",");
+						String stid = str[0];
+						String state = str[2];
+						abMap.put(stid,state);
+						line = br.readLine();
+						
+					}
+					br.close();
+				}
+				
+				
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+		
+		public void map(LongWritable key, Text value, Context context)
+		{
+			try
+			{
+				String row = value.toString();
+				String str[] = row.split(",");
+				String stid = str[0];
+				String pid = str[1];
+				String state = abMap.get(stid);
+				
+				String myVal = row+","+state;
+				
+				context.write(new Text(pid), new Text(myVal));
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+		
+	}
+	
+	// mapper class 2 for POS2
+	public static class POSm2 extends Mapper<LongWritable,Text,Text,Text>
+	{
+		private Map<String,String> abMap1 = new HashMap<String,String>();
+		
+		// setup method
+		public void setup(Context context)
+		{
+			try
+			{
+				super.setup(context);
+				
+				URI[] u = context.getCacheFiles();
+				
+				Path p = new Path(u[0]);
+				
+				if(p.getName().equals("stmaster.csv"))
+				{
+					BufferedReader br = new BufferedReader(new FileReader(p.toString()));
+					String line = br.readLine();
+					
+					while(line!=null)
+					{
+						String str[] = line.split(",");
+						String stid = str[0];
+						String state = str[2];
+						
+						abMap1.put(stid, state);
+						line = br.readLine();
+					}
+					br.close();
+				}
+				
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+		
+		// map method
+		public void map(LongWritable key, Text value,Context context)
+		{
+			try
+			{
+				String row = value.toString();
+				String str[] = row.split(",");
+				String stid = str[0];
+				String pid = str[1];
+				String state = abMap1.get(stid);
+				String myVal = row+","+state;
+				
+				context.write(new Text(pid), new Text(myVal));
+				
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	
+	// partitioner class
+	public static class POSp extends Partitioner<Text,Text>
+	{
+		public int getPartition(Text key, Text value, int numReduceTasks)
+		{
+			String str[] = value.toString().split(",");
+			String state = str[2];
+			if(state.equals("MAH"))
+			{
+				return 0;
+			}
+			else
+			{
+				return 1;
+			}
+		}
+	}
+	
+	// reducer class
+	public static class POSr extends Reducer<Text,Text,Text,IntWritable>
+	{
+		public int tqty = 0;
+		
+		public void reduce(Text key,Iterable<Text> values, Context context)
+		{
+			try
+			{
+				for(Text val: values)
+				{
+					String str[] = val.toString().split(",");
+					
+					int qty = Integer.parseInt(str[2]);
+					tqty+=qty;
+				}
+				context.write(key, new IntWritable(tqty));
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	
+	public static void main(String args[]) throws Exception
+	{
+		Configuration conf = new Configuration();
+		Job job = Job.getInstance();
+		
+		job.setJarByClass(POSPgm.class);
+		
+		
+		job.setReducerClass(POSr.class);
+		job.setOutputKeyClass(Text.class);
+		job.setOutputValueClass(IntWritable.class);
+		
+		job.setNumReduceTasks(2);
+		
+		
+		job.addCacheFile(new Path("stmaster.csv").toUri());
+		
+		MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, POSm1.class);
+		MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, POSm2.class);
+		
+		
+		
+	}
+}

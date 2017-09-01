@@ -1,0 +1,57 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.net.URI;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+
+public class EmpEx {
+
+	public static class EmpM extends Mapper<LongWritable,Text,Text,Text>
+	{
+		private Map<String,String> abMap = new HashMap<String,String>();
+		private Map<String,String> abMap1 = new HashMap<String,String>();
+		
+		private Text opkey = new Text();
+		private Text opvalue = new Text();
+		
+		public void setup(Context context)
+		{
+			try
+			{
+				super.setup(context);
+				
+				URI files[] = context.getCacheFiles();
+				
+				Path p = new Path(files[0]);
+				Path p1 = new Path(files[1]);
+				
+				if(p.getName().equals("salary.csv"))
+				{
+					BufferedReader rd = new BufferedReader(new FileReader(p.toString()));
+					String line = rd.readLine();
+					
+					
+					
+					
+				}
+				
+				
+				
+				
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+		
+		
+	}
+	
+}

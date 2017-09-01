@@ -1,0 +1,114 @@
+
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URI;
+import java.util.HashMap;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Partitioner;
+import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+
+
+public class POSPgm2 {
+	
+	
+	public static class MyMapper extends Mapper<LongWritable,Text, Text, Text> {
+		
+		HashMap<String,String> hmap = new HashMap<String,String>();
+		public void setup(Context context) throws IOException, InterruptedException
+		{
+			super.setup(context);
+			URI[] files = context.getCacheFiles();
+			Path p = new Path(files[0]);
+			FileSystem fs = FileSystem.get(context.getConfiguration());
+			if(p.getName().equals("store_master.txt"))
+			{
+				BufferedReader reader = new BufferedReader(new InputStreamReader(fs.open(p)));
+				String line = reader.readLine();
+				while(line != null) {
+					String[] tokens = line.split(",");
+					String storeID = tokens[0];
+					String state = tokens[2];
+					hmap.put(storeID, state);
+					line = reader.readLine();
+				}
+				reader.close();
+			}
+		}
+		protected void map(LongWritable key, Text value, Context context) throws java.io.IOException, InterruptedException 
+		{
+	        	String row = value.toString();
+	        	String[] tokens = row.split(",");
+	        	String storeID = tokens[0];
+	        	String prodID = tokens[1];
+	        	String quantity = tokens[2];
+	        	String state = hmap.get(storeID);
+	        	String val = state + "," + quantity;
+	        	context.write(new Text(prodID),new Text(val));
+		}  
+	}
+	
+	public static class MyPartitioner extends Partitioner<Text,Text>
+	{
+		@Override
+		public int getPartition(Text key, Text value, int numOfPartitions)
+		{
+			String valArr[] = value.toString().split(",");
+			if(valArr[0].matches("MAH"))
+			{
+				return 0;
+			}
+			else 
+			{
+				return 1;
+			}
+		}
+	}
+	
+	public static class MyReducer extends Reducer<Text,Text,Text,Text>
+	{
+		public void reduce(Text key, Iterable<Text> value, Context context) throws IOException, InterruptedException
+		{
+			int totalQuantity= 0;
+			for(Text v : value)
+			{
+				String[] valArr = v.toString().split(",");
+				int quantity = Integer.valueOf(valArr[1]);
+				totalQuantity+=quantity;
+			}
+			context.write(new Text(key), new Text(String.valueOf(totalQuantity)));
+		}
+	}
+	
+	
+  public static void main(String[] args) 
+                  throws IOException, ClassNotFoundException, InterruptedException {
+    
+	Configuration conf = new Configuration();
+	conf.set("mapreduce.output.textoutputformat.separator", ",");
+	Job job = Job.getInstance(conf);
+    job.setJarByClass(POSPgm2.class);
+    job.setJobName("Map Side Join");
+    job.setMapperClass(MyMapper.class);
+    job.setPartitionerClass(MyPartitioner.class);
+    job.setReducerClass(MyReducer.class);
+    job.addCacheFile(new Path(args[1]).toUri());
+    job.setNumReduceTasks(2);
+    job.setMapOutputKeyClass(Text.class);
+    job.setMapOutputValueClass(Text.class);
+    FileInputFormat.addInputPath(job, new Path(args[0]));
+    FileSystem.get(conf).delete(new Path(args[2]),true);
+    FileOutputFormat.setOutputPath(job, new Path(args[2]));
+	System.exit(job.waitForCompletion(true) ? 0 : 1);
+  }
+}

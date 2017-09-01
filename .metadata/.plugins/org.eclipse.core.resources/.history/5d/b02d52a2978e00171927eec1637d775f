@@ -1,0 +1,62 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.net.URI;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+
+public class POSex {
+	
+	// mapper class for POS1
+	public static class POSm1 extends Mapper<LongWritable,Text,Text,Text>
+	{
+		private Map<String,String> abMap = new HashMap<String,String>();
+		
+		public void setup(Context context)
+		{
+			try
+			{
+				super.setup(context);
+				
+				URI[] u = context.getCacheFiles();
+				
+				Path p = new Path(u[0]);
+				
+				if(p.getName().equals("stmaster.csv"))
+				{
+					BufferedReader br = new BufferedReader(new FileReader(p.toString()));
+					String line = br.readLine();
+					
+					while(line!=null)
+					{
+						String str[] = line.split(",");
+						String stid = str[0];
+						String state = str[2];
+						abMap.put(stid,state);
+						line = br.readLine();
+						
+					}
+					br.close();
+				}
+				
+				
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	
+	
+
+	public static void main(String args[]) throws Exception
+	{
+		
+	}
+}
