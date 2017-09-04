@@ -1,0 +1,21 @@
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.util.Tool;
+
+
+public class ImageDupsDriver extends Configured implements Tool {
+	
+	public int run(String args[]) throws Exception
+	{
+		Configuration conf = getConf();
+		Job job = Job.getInstance(conf, "Unique images");
+		
+		job.setJarByClass(ImageDupsDriver.class);
+		
+		
+		
+		return 0;
+	}
+
+}

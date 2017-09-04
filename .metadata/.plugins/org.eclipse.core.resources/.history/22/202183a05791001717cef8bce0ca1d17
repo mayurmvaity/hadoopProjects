@@ -1,0 +1,52 @@
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.Mapper;
+
+
+public class SeqToText {
+
+	
+	// mapper class
+	public static class STMapper extends Mapper<LongWritable,Text,LongWritable,Text>
+	{
+		public void map(LongWritable key,Text value,Context context)
+		{
+			try
+			{
+				String []str = value.toString().split(",");
+				
+				Long mykey = Long.parseLong(str[0]);
+				
+				context.write(new LongWritable(mykey), new Text(str[1]));
+				
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	
+	// main method
+	public static void main(String args[]) throws Exception
+	{
+		Configuration conf = new Configuration();
+		Job job = Job.getInstance(conf, "Seq to text");
+		
+		job.setJarByClass(SeqToText.class);
+		
+		job.setMapperClass(STMapper.class);
+		job.setMapOutputKeyClass(LongWritable.class);
+		job.setMapOutputValueClass(Text.class);
+		
+		job.setNumReduceTasks(0);
+		
+		
+		
+		
+	}
+	
+	
+}

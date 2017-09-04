@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="17" version="2.0">
+<workbench progressCount="19" version="2.0">
 <workbenchAdvisor/>
 <window height="666" maximized="true" width="1018" x="65" y="-4">
 <fastViewData fastViewLocation="1024"/>
@@ -19,7 +19,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -28,36 +28,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmpEx.java" partName="EmpEx.java" path="/home/franklin/workspace/ReduceSideJoinPro/src/EmpEx.java" title="EmpEx.java" tooltip="ReduceSideJoinPro/src/EmpEx.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ReduceSideJoinPro/src/EmpEx.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2488" selectionTopPixel="1447"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="POSPgm.java" partName="POSPgm.java" path="/home/franklin/workspace/ReduceSideJoinPro/src/POSPgm.java" title="POSPgm.java" tooltip="ReduceSideJoinPro/src/POSPgm.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ReduceSideJoinPro/src/POSPgm.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4785" selectionTopPixel="2794"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CustomerJoin.java" partName="CustomerJoin.java" path="/home/franklin/workspace/JoinsPro/src/CustomerJoin.java" title="CustomerJoin.java" tooltip="JoinsPro/src/CustomerJoin.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JoinsPro/src/CustomerJoin.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2469" selectionTopPixel="1477"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyPartitioner.java" partName="MyPartitioner.java" path="/home/franklin/workspace/PartitionerPro/src/MyPartitioner.java" title="MyPartitioner.java" tooltip="PartitionerPro/src/MyPartitioner.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PartitionerPro/src/MyPartitioner.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="1363"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SentimentPgm.java" partName="SentimentPgm.java" path="/home/franklin/workspace/DictnPro/src/SentimentPgm.java" title="SentimentPgm.java" tooltip="DictnPro/src/SentimentPgm.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DictnPro/src/SentimentPgm.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1470" selectionTopPixel="2107"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
@@ -95,9 +69,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings (22 items)"/>
-<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (25 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="257" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -294,166 +266,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReduceSideJoinPro/src/POSPgm.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JoinsPro/src/CustomerJoin.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReduceSideJoinPro/src/EmpEx.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/PartitionerPro/src/MyPartitioner.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReduceSideJoinPro/src/POSPgm2.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DictnPro/src/SentimentPgm.java"/>
-</editors>
-<item historyLabel="EmpEx.java" index="2">
-<position info="not_deleted" x="3048" y="114"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position/>
-</item>
-<item historyLabel="CustomerJoin.java" index="1">
-<position info="not_deleted" x="2469" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position/>
-</item>
-<item historyLabel="EmpEx.java" index="2">
-<position info="not_deleted" x="3048" y="114"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position/>
-</item>
-<item historyLabel="EmpEx.java" index="2">
-<position info="not_deleted" x="2488" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="3033" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="1745" y="0"/>
-</item>
-<item historyLabel="CustomerJoin.java" index="1">
-<position info="not_deleted" x="2469" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="1745" y="0"/>
-</item>
-<item historyLabel="CustomerJoin.java" index="1">
-<position info="not_deleted" x="2469" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="1745" y="0"/>
-</item>
-<item historyLabel="CustomerJoin.java" index="1">
-<position info="not_deleted" x="2469" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="1745" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="4286" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position/>
-</item>
-<item historyLabel="MyPartitioner.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position/>
-</item>
-<item historyLabel="MyPartitioner.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="4514" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="5576" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="5577" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="5579" y="1"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="5590" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="5285" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="5261" y="16"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="5285" y="0"/>
-</item>
-<item historyLabel="MyPartitioner.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="CustomerJoin.java" index="1">
-<position info="not_deleted" x="2469" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="4785" y="0"/>
-</item>
-<item historyLabel="POSPgm2.java" index="4">
-<position info="not_deleted" x="1" y="0"/>
-</item>
-<item historyLabel="POSPgm.java" index="0">
-<position info="not_deleted" x="4785" y="0"/>
-</item>
-<item historyLabel="SentimentPgm.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SentimentPgm.java" index="5">
-<position info="not_deleted" x="3348" y="11"/>
-</item>
-<item historyLabel="SentimentPgm.java" index="5">
-<position info="not_deleted" x="1175" y="7"/>
-</item>
-<item historyLabel="SentimentPgm.java" index="5">
-<position info="not_deleted" x="3348" y="11"/>
-</item>
-<item historyLabel="SentimentPgm.java" index="5">
-<position info="not_deleted" x="3537" y="0"/>
-</item>
-<item historyLabel="SentimentPgm.java" index="5">
-<position info="not_deleted" x="1402" y="4"/>
-</item>
-<item historyLabel="SentimentPgm.java" index="5">
-<position info="not_deleted" x="4980" y="16"/>
-</item>
-<item historyLabel="SentimentPgm.java" index="5">
-<position info="not_deleted" x="4254" y="13"/>
-</item>
-<item historyLabel="SentimentPgm.java" index="5">
-<position info="not_deleted" x="4728" y="15"/>
-</item>
-<item historyLabel="SentimentPgm.java" index="5">
-<position info="not_deleted" x="4787" y="16"/>
-</item>
-<item historyLabel="SentimentPgm.java" index="5">
-<position info="not_deleted" x="4300" y="3"/>
-</item>
-<item historyLabel="SentimentPgm.java" index="5">
-<position info="not_deleted" x="4920" y="15"/>
-</item>
-<item active="true" historyLabel="SentimentPgm.java" index="5">
-<position info="not_deleted" x="3537" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -470,6 +283,27 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImageDupsDriver.java" tooltip="ImagePr/src/ImageDupsDriver.java">
+<persistable path="/ImagePr/src/ImageDupsDriver.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImageDupsReducer.java" tooltip="ImagePr/src/ImageDupsReducer.java">
+<persistable path="/ImagePr/src/ImageDupsReducer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImageDupsMapper.java" tooltip="ImagePr/src/ImageDupsMapper.java">
+<persistable path="/ImagePr/src/ImageDupsMapper.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BinaryFilesToHadoopSequenceFile.java" tooltip="ImagePr/src/BinaryFilesToHadoopSequenceFile.java">
+<persistable path="/ImagePr/src/BinaryFilesToHadoopSequenceFile.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BinaryToSeq.java" tooltip="ImagePr/src/BinaryToSeq.java">
+<persistable path="/ImagePr/src/BinaryToSeq.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SeqToText.java" tooltip="ImagePro/src/SeqToText.java">
+<persistable path="/ImagePro/src/SeqToText.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TextToNull.java" tooltip="ImagePro/src/TextToNull.java">
+<persistable path="/ImagePro/src/TextToNull.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SentimentPgm.java" tooltip="DictnPro/src/SentimentPgm.java">
 <persistable path="/DictnPro/src/SentimentPgm.java"/>
 </file>
@@ -493,27 +327,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="C1Part.java" tooltip="PartitionerPro/src/C1Part.java">
 <persistable path="/PartitionerPro/src/C1Part.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="C2Product.java" tooltip="PartitionerPro/src/C2Product.java">
-<persistable path="/PartitionerPro/src/C2Product.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="C1PartCat.java" tooltip="PartitionerPro/src/C1PartCat.java">
-<persistable path="/PartitionerPro/src/C1PartCat.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="POSpart.java" tooltip="PartitionerPro/src/POSpart.java">
-<persistable path="/PartitionerPro/src/POSpart.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SearchPgm.java" tooltip="SearchProject/src/SearchPgm.java">
-<persistable path="/SearchProject/src/SearchPgm.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TokenizerProPgm.java" tooltip="TokenizerPro/src/TokenizerProPgm.java">
-<persistable path="/TokenizerPro/src/TokenizerProPgm.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AvgByCity.java" tooltip="AvgByCity/src/AvgByCity.java">
-<persistable path="/AvgByCity/src/AvgByCity.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="STDCalls.java" tooltip="PhoneRecords/src/STDCalls.java">
-<persistable path="/PhoneRecords/src/STDCalls.java"/>
 </file>
 </mruList>
 </workbench>

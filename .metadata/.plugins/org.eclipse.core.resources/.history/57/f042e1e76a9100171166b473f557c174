@@ -1,0 +1,39 @@
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
+
+import org.apache.hadoop.io.BytesWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+
+public class ImageDupsMapper extends Mapper<Text,BytesWritable,Text,Text> {
+
+	public void map(Text key,BytesWritable value,Context context) throws InterruptedException, IOException
+	{
+		String md5str = "";
+		try
+		{
+			md5str = calculateMd5(value.getBytes());
+			
+			
+		}
+		catch(NoSuchAlgorithmException e)
+		{
+			e.printStackTrace();
+			context.setStatus("Internal error - cannot find calculatemd5 algorithm");
+			return;
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+		context.write(new Text(md5str), key);
+	}
+
+	static String calculateMd5(byte[] imagedata) throws NoSuchAlgorithmException
+	{
+		
+	}
+	
+	
+}

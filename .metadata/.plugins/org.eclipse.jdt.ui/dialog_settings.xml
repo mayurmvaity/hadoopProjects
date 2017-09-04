@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="/usr/local/hadoop/share/hadoop/mapreduce" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="/usr/local/hadoop/share/hadoop/common" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item value="false" key="updateSimilarElements"/>
 		<item value="1" key="updateSimilarElementsMatchStrategy"/>
@@ -81,11 +81,11 @@
 		<item value="false" key="JarManifestWizardPage.SAVE_MANIFEST"/>
 		<item value="false" key="JarPackageWizardPage.EXPORT_OUTPUT_FOLDER"/>
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/home/franklin/ImagePr.jar"/>
+			<item value="/home/franklin/ImagePro.jar"/>
 			<item value="/home/franklin/sent.jar"/>
 			<item value="/home/franklin/POSPgm.jar"/>
 			<item value="/home/franklin/EmpEx.jar"/>
-			<item value="/home/franklin/C2Cat.jar"/>
-			<item value="/home/franklin/C2Product.jar"/>
 		</list>
 	</section>
 	<section name="JavaElementSearchActions">

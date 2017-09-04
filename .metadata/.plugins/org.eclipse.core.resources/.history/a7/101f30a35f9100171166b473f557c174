@@ -1,0 +1,39 @@
+import java.net.URI;
+import org.apache.hadoop.fs.FileSystem;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FSDataInputStream;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.BytesWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+
+public class BinaryToSeq {
+
+	
+	// mapper class
+	public static class BTSMapper extends Mapper<LongWritable,Text,Text,BytesWritable>
+	{
+		public void map(LongWritable key,Text value,Context context)
+		{
+			try
+			{
+				String str = value.toString();
+				Configuration conf = new Configuration();
+				FileSystem fs = FileSystem.get(URI.create(str), conf);
+				
+				FSDataInputStream in = null;
+				in = fs.open(new Path(str));
+				
+				
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	
+}
